@@ -1,0 +1,52 @@
+<?= $this->doctype() ?>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
+
+    <!-- Le styles -->
+    <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+        ->prependStylesheet($this->basePath('login/vendor/bootstrap/css/bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('login/fonts/font-awesome-4.7.0/css/font-awesome.min.css'))
+        ->prependStylesheet($this->basePath('login/vendor/animate/animate.css'))
+        ->prependStylesheet($this->basePath('login/vendor/css-hamburgers/hamburgers.min.css'))
+        ->prependStylesheet($this->basePath('login/vendor/animsition/css/animsition.min.css'))
+        ->prependStylesheet($this->basePath('login/vendor/select2/select2.min.css'))
+        ->prependStylesheet($this->basePath('login/vendor/daterangepicker/daterangepicker.css'))
+        ->prependStylesheet($this->basePath('login/css/util.css'))
+        ->prependStylesheet($this->basePath('login/css/main.css'))
+    ?>
+
+    <!-- Scripts -->
+    <?= $this->headScript()
+        ->prependFile($this->basePath('login/vendor/jquery/jquery-3.2.1.min.js'))
+        ->prependFile($this->basePath('js/autobahn.js'))
+    ?>
+</head>
+<body>
+<div class="container">
+    <?= $this->content ?>
+    <hr>
+    <footer>
+        <p>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
+    </footer>
+</div>
+<?= $this->inlineScript() ?>
+<!-- Scripts -->
+<?= $this->headScript()
+    ->prependFile($this->basePath('login/vendor/animsition/js/animsition.min.js'))
+    ->prependFile($this->basePath('login/vendor/bootstrap/js/popper.js'))
+    ->prependFile($this->basePath('login/vendor/bootstrap/js/bootstrap.min.js'))
+    ->prependFile($this->basePath('login/vendor/select2/select2.min.js'))
+    ->prependFile($this->basePath('login/vendor/daterangepicker/moment.min.js'))
+    ->prependFile($this->basePath('login/vendor/daterangepicker/daterangepicker.js'))
+    ->prependFile($this->basePath('login/vendor/countdowntime/countdowntime.js'))
+    ->prependFile($this->basePath('login/js/main.js'))
+?>
+</body>
+</html>
